@@ -1,0 +1,11 @@
+
+            <ul class="nav nav-sidebar cat-menu" id="left">
+              <li><a href="#" id="cat-title"><h3>Каталог товаров</h3></a></li>
+              {% for cat in categories %}
+              <li id="cat"><a href="http://127.0.0.1:8000/{{ cat.alias }}">{{ cat.name }}</a></li>
+              {% if forloop.last %}
+              <li id="cat-last"><a href="http://127.0.0.1:8000/{{ cat.alias }}">{{ cat.name }}</a> </li>
+              {% endif %}
+              {% endfor %}
+
+            </ul>

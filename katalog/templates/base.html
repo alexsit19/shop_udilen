@@ -1,0 +1,185 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+   {% block title %} <title>Запчасти для бытовой техники </title>{% endblock %}
+
+    <!-- Bootstrap -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <header>
+      <div class="top-menu">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-5 col-md-5 col-sm-12">
+              <ul class="menu">
+                <li><a href="#">Каталог</a></li>
+                <li><a href="#">Доставка и оплата</a></li>
+                <li><a href="#">Обратная связь</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-5 col-md-5 col-sm-12">
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-12">
+              <div class="regenter">
+                <a href="#">Вход</a>
+                /
+                <a href="#">Регистрация</a>
+              </div>
+              </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="info-bar">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-3">
+              <h1><center>Логотип</center></h1>
+            </div>
+            <div class="col-lg-3 col-md-3 ">
+              <h4 class="phoneadress">Адрес:</h4><br><b>г. Могилев, ул. Ненастоящая, д.32, оф.15.</b>
+            </div>
+            <div class="col-lg-3 col-md-3">
+              <h4 class="phoneadress">Телефон:</h4><br>
+                <b>+375(29)555-33-66, +375(33)215-25-48</b>
+            </div>
+            <div><h3>Корзина</h3></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <br>
+    <content>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-12">
+
+            {% include 'left-menu.html' %}
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 search-form-container">
+            <form class="search-form">
+              <input type="text" name="" class="search-input">
+              <input type="submit" value="найти" class="search-button">
+            </form>
+
+            <!----------------------------------------------------------------------------------------------------- -->
+            <div class="container">
+              <div class="row">
+              <div class="col-lg-3 col-md-3 col-sm-12">
+              {% block content %}
+                <h1>Главная страница</h1>
+                <img src="http://127.0.0.1:8000/media/image/1032_1_6ccRpIw.jpg">
+                {{request.get_host}}
+                {% endblock %}
+
+              </div>
+              </div>
+
+              </div>
+              <div class="text-center">
+                  <div class="pagination">
+                     <span class="step-links">
+                    {% if products.has_previous %}
+                        <a href="?page={{ products.previous_page_number }}">назад</a>
+                    {% endif %}
+
+                    <span class="current">
+                        Страница {{ products.number }} из {{ products.paginator.num_pages }}
+                    </span>
+
+                    {% if products.has_next %}
+                        <a href="?page={{ products.next_page_number }}">вперед</a>
+                    {% endif %}
+
+                </span>
+            </div>
+              </div>
+          </div>
+          <!-----------------------------------------------------------------------------------------------------  -->
+
+          <div class="col-lg-3 col-md-3 col-sm-12">
+            <div class="right-column-title">
+              <h3 class="right-block">Партнеры</h3>
+            </div>
+            <div class="right-content">
+              <p>далее идет просто демонстрационный текст,
+              тут могут быть картинки и вообще все что угодно
+              картинки, ссылки и этот блок будет продолжаться вниз пока есть текст</p>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+    </content>
+    <br>
+    <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-12">
+          <h3>Сайт</h3>
+          <div class="footer-menu">
+                <li><a href="#">Каталог</a></li>
+                <li><a href="#">Доставка и оплата</a></li>
+                <li><a href="#">Обратная связь</a></li>
+                <li><a href="#">Контакты</a></li>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-12">
+         <h3>Продукция</h3>
+            <div class="footer-products">
+              <li id="cat-footer"><a href="#">Пункт1</a></li>
+              <li id="cat-footer"><a href="#">Пункт1</a></li>
+              <li id="cat-footer"><a href="#">Пункт1</a></li>
+              <li id="cat-footer"><a href="#">Пункт1</a></li>
+              <li id="cat-footer"><a href="#">Пункт1</a></li>
+              <li id="cat-footer"><a href="#">Пункт1</a></li>
+              <li id="cat-footer"><a href="#">Пункт1</a></li>
+              <li id="cat-footer"><a href="#">Пункт1</a></li>
+              <li id="cat-footer"><a href="#">Пункт1</a></li>
+              <li id="cat-footer"><a href="#">Пункт1</a></li>
+              <li id="cat-footer"><a href="#">Пункт1</a></li>
+              <li id="cat-footer"><a href="#">Пункт1</a></li>
+              <li id="cat-footer"><a href="#">Пункт1</a></li>
+              <li id="cat-footer"><a href="#">Пункт1</a></li>
+              <li id="cat-footer"><a href="#">Пункт1</a></li>
+              <li id="cat-footer"><a href="#">Пункт1</a></li>
+              <li id="cat-footer"><a href="#">Пункт1</a></li>
+              <li id="cat-footer"><a href="#">Пункт1</a></li>
+            </div>
+
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-12">
+          <h3>Мы в соц сетях</h3>
+
+
+        </div>
+      </div>
+    </div>
+    </footer>
+
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    
+  </body>
+</html>

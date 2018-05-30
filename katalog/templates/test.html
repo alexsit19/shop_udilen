@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for product in products %}
+
+{% if forloop.counter == 4 %}
+<h1>Раздел</h1>
+{% endif %}
+<h3>Категория: </h3><br>{{ product.category }}<br>
+<h3>Имя </h3><br>{{ product.name }}<br>
+<h3>Картинка </h3><br>{{ product.image }}<br>
+<h3>Описание </h3><br>{{ product.description|linebreaks }}<br>
+<h3>Цена </h3><br>{{ product.coast }}<br>
+<h3>Колличество </h3><br>{{ product.quantity }}<br>
+<h3>Код </h3><br>{{ product.code }}<br>
+{% endfor %}
+
+<div class="pagination">
+    <span class="step-links">
+        {% if products.has_previous %}
+            <a href="?page={{ products.previous_page_number }}">назад</a>
+        {% endif %}
+
+        <span class="current">
+            Страница {{ products.number }} из {{ products.paginator.num_pages }}
+        </span>
+
+        {% if products.has_next %}
+            <a href="?page={{ products.next_page_number }}">вперед</a>
+        {% endif %}
+
+    </span>
+</div>
+
+
+
+</body>
+</html>

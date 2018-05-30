@@ -1,0 +1,185 @@
+
+.top-menu  {
+	background: black;
+	padding-top: 8px;
+	padding-bottom: 10px;
+}
+
+.top-menu a {
+	color: white;
+	display: block;
+	text-decoration: underline;
+	display: inline-block;
+}
+
+.top-menu li {
+	display: inline;
+	padding-right: 10px;
+
+}
+
+.top-menu a:hover{
+	text-decoration: none;
+}
+
+.top-menu  ul {
+	list-style: none;
+	display: inline;
+	
+}
+
+
+.regenter {
+	color: white;
+	display: inline-block;
+}
+
+.info-bar {
+	background-color: #f6f6f6;
+	padding: 15px;
+	border-bottom: 1px solid silver;
+}
+
+#cat {
+	border-left: 1px solid silver;
+	border-right: 1px solid silver;
+	border-bottom: 1px solid silver;
+}
+
+#cat-title {
+	display: block;
+	text-transform: uppercase;
+	color: #fff;
+	background: #1391C7;
+	padding: 5px;
+	border-radius: 5px 5px 0 0;
+	text-align: center;
+
+}
+
+#cat-title h3 {
+	font-size: 20px;
+}
+
+#cat-last {
+	border-left: 1px solid silver;
+	border-right: 1px solid silver;
+	border-bottom: 1px solid silver;
+	border-radius: 0 0 5px 5px;
+}
+
+.search-form {
+	
+	width: 100%;
+	height: 62px;
+	background: #1391C7;
+	padding: 18px;
+	border-radius: 5px;
+	
+}
+
+.search-input {
+	width: 85%;
+	border-radius: 5px;
+}
+
+.search-button {
+	width: 13%;
+	border-radius: 5px;
+	margin-left: 5px;
+}
+
+.right-column-title {
+
+	background: #1391C7;
+	padding: 5px;
+	border-radius: 5px 5px 0 0;
+	text-align: center;
+	
+
+}
+
+.right-column-title h3 {
+	font-size: 20px;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.right-content {
+	border-left: solid 1px silver;
+	border-right: solid 1px silver;
+	border-bottom: solid 1px silver;
+	border-radius: 0 0 5px 5px;
+	padding: 10px;
+	text-align: justify;
+}
+
+footer {
+	background: black;
+	color: gray;
+	padding-bottom: 20px;
+	
+
+}
+
+footer h3 {
+	text-transform: uppercase;
+	font-size: 15px;
+	padding-bottom: 7px;
+	color: #eee;
+	border-bottom: 1px solid gray;
+}
+
+.footer-products, 
+.footer-menu {
+	
+	list-style: none;
+
+}
+
+.footer-products li a, 
+.footer-menu li a {
+	text-decoration: none;
+	color: gray;
+
+}
+
+.footer-products li a:hover, 
+.footer-menu li a:hover {
+	text-decoration: underline;
+} 
+
+.footer-products li, 
+.footer-menu li{
+	
+	margin-left: 0px;
+	padding-left: 0px;
+
+}
+
+.product-img {
+	margin-top: 15px;
+}
+
+.product-code {
+	color: darkgray;
+	text-align: center;
+	margin-right: 60px;
+}
+
+.discribe {
+	color: gray;
+}
+
+.price {
+	text-align: right;
+	margin-right: 50px;
+}
+
+.product {
+	border: 1px solid silver;
+	border-radius: 5px;
+	margin-top: 15px;
+	padding-left: 10px;
+	margin-left: -13px;
+}
